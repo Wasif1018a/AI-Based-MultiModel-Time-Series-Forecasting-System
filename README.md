@@ -1,2 +1,8 @@
 # Data-Mining-Project
 A forecasting system that not only implements and compares different time series models (ARIMA, ANN, Hybrid ARIMA-ANN) across various sectors but also includes a user-friendly front-end interface for visualizing data and forecasts.
+
+Contributions:
+
+1). Team member 1:  Wasif Mehboob primarily focused on the implementation of the Flask backend and the React.js frontend to design the user interface of the application. This involved setting up API endpoints in Flask to handle requests for data and plotting, as well as creating the necessary components and routes in React.js to display the retrieved data and plots to the user. Additionally, Wasif implemented a method for future forecasting from models that did not have a forecast function but only had a predict function. This method involved using the last explored data to initialize a future data array, which was then sent to the predict function to predict future values.
+
+2). Team member 2:  Ahsan Waseem was responsible for data preprocessing, normalizing, and selecting data that had lower p-value. He explored three types of data which were (Difference between the Original and Rolling Mean), (Difference between the Original and Exponentially Weighted Mean), and differenced data by shift 1. (Difference between the Original and Rolling Mean) data was selected because it had lower p-value than others. Ahsan implemented models that had a forecast function and did testing of models on historical data with cross validation to check their performance using predict function. This involved configuring and training models. Ahsan ensured that these models were properly configured and trained to generate accurate forecasts. 
