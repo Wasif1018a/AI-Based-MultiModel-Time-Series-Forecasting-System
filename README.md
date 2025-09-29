@@ -134,7 +134,7 @@ The frontend should now be running on:
 
 ## 📌 Features
 
-✔️ Multiple model support: ARIMA, ANN, Hybrid ARIMA–ANN, LSTM, Prophet, SVR.
+✔️ Multiple model support: ARIMA, SARIMA, ANN, Hybrid ARIMA–ANN, LSTM, Prophet, SVR.
 
 ✔️ Custom workaround for `predict()`-only models.
 
