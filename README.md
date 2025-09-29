@@ -135,9 +135,13 @@ The frontend should now be running on:
 ## 📌 Features
 
 ✔️ Multiple model support: ARIMA, ANN, Hybrid ARIMA–ANN, LSTM, Prophet, SVR.
+
 ✔️ Custom workaround for `predict()`-only models.
+
 ✔️ SQLite3 integration for storing results.
+
 ✔️ Flask API for backend handling.
+
 ✔️ React.js frontend for visualizations and user interaction.
 
 ---
