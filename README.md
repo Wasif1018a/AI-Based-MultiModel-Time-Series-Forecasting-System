@@ -1,4 +1,4 @@
-# 📊 Data-Mining-Project
+# 📊 AI-Based MultiModel Time Series Forecasting System
 
 A forecasting system that implements and compares different time series models (ARIMA, ANN, Hybrid ARIMA–ANN, and more) across various sectors, with both backend and frontend support for **data visualization** and **forecasting results**.
 
