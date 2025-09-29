@@ -1,8 +1,143 @@
-# Data-Mining-Project
-A forecasting system that not only implements and compares different time series models (ARIMA, ANN, Hybrid ARIMA-ANN) across various sectors but also includes a user-friendly front-end interface for visualizing data and forecasts.
+# 📊 Data-Mining-Project
 
-Contributions:
+A forecasting system that implements and compares different time series models (ARIMA, ANN, Hybrid ARIMA–ANN, and more) across various sectors, with both backend and frontend support for **data visualization** and **forecasting results**.
 
-1). Team member 1:  Wasif Mehboob primarily focused on the implementation of the Flask backend and the React.js frontend to design the user interface of the application. This involved setting up API endpoints in Flask to handle requests for data and plotting, as well as creating the necessary components and routes in React.js to display the retrieved data and plots to the user. Additionally, Wasif implemented a method for future forecasting from models that did not have a forecast function but only had a predict function. This method involved using the last explored data to initialize a future data array, which was then sent to the predict function to predict future values.
+The project integrates:
 
-2). Team member 2:  Ahsan Waseem was responsible for data preprocessing, normalizing, and selecting data that had lower p-value. He explored three types of data which were (Difference between the Original and Rolling Mean), (Difference between the Original and Exponentially Weighted Mean), and differenced data by shift 1. (Difference between the Original and Rolling Mean) data was selected because it had lower p-value than others. Ahsan implemented models that had a forecast function and did testing of models on historical data with cross validation to check their performance using predict function. This involved configuring and training models. Ahsan ensured that these models were properly configured and trained to generate accurate forecasts. 
+* **Python (Flask)** as the backend service to handle requests, run models, and serve results.
+* **React.js (App.js)** as the frontend for users to interact with forecasts and visualizations.
+* **SQLite3** for storing model results.
+
+---
+
+## 👥 Team Contributions
+
+### 🟢 Wasif Mehboob
+
+* Implemented the **Flask backend** and **React.js frontend**.
+* Built API endpoints in **Flask** to serve forecasting results and plots.
+* Designed **frontend components (App.js)** for displaying forecasts interactively.
+* Implemented a **future forecasting workaround** for models with only `predict()` (no `forecast()`). This method used the last observed data to initialize a future data array, which was then passed into the model’s prediction function.
+
+### 🟠 Ahsan Waseem
+
+* Focused on **data preprocessing and normalization**.
+* Tested different data transformation strategies:
+
+  * Difference between Original & Rolling Mean
+  * Difference between Original & Exponentially Weighted Mean
+  * Differenced data (shift=1)
+* Selected the **Rolling Mean differencing** due to its lower p-value and better stationarity.
+* Configured, trained, and validated models with built-in forecasting (`forecast()`) and evaluated them using cross-validation.
+* Ensured proper model tuning for **accurate forecasts**.
+
+---
+
+## 🗂 Project Structure
+
+```bash
+├── App.js              # React frontend – displays data & forecast results
+├── Flask.py            # Flask backend – loads DB results & serves APIs
+├── Main_Code.py        # Core script – preprocessing, training models, forecasting
+├── Documentation.pdf   # Project report & documentation
+└── README.md           # Project description
+```
+
+---
+
+## 🔑 Key Files
+
+* **Main_Code.py**
+
+  * Handles data preprocessing and transformations.
+  * Trains models using `statsmodels` (ARIMA, etc.), ANN, Hybrid ARIMA–ANN.
+  * Includes other architectures like **LSTM, Prophet, SVR**.
+  * Generates predictive forecasts and stores results in **SQLite3 DB**.
+
+* **Flask.py**
+
+  * Loads forecasting results from the database.
+  * Hosts API endpoints to send results and plots to the frontend.
+
+* **App.js**
+
+  * React.js frontend file.
+  * Displays forecasts, plots, and allows user interaction with the system.
+
+* **Documentation.pdf**
+
+  * Detailed explanation of methodology, models, and results.
+
+---
+
+## 🚀 How to Run
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/Data-Mining-Project.git
+cd Data-Mining-Project
+```
+
+### 2️⃣ Set Up the Backend (Flask)
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt   # if available
+```
+
+Or manually install:
+
+```bash
+pip install flask statsmodels tensorflow scikit-learn prophet sqlite3
+```
+
+Run the backend:
+
+```bash
+python Flask.py
+```
+
+The backend should now be running on:
+👉 `http://127.0.0.1:5000/`
+
+---
+
+### 3️⃣ Set Up the Frontend (React)
+
+Navigate to frontend directory (if structured separately) or same folder if `App.js` is standalone.
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the frontend:
+
+```bash
+npm start
+```
+
+The frontend should now be running on:
+👉 `http://localhost:3000/`
+
+---
+
+### 4️⃣ Usage Flow
+
+* Preprocess & train models using `Main_Code.py` → results stored in SQLite3.
+* Start Flask backend (`Flask.py`) → serves API endpoints.
+* Launch React frontend (`App.js`) → fetches and displays results.
+
+---
+
+## 📌 Features
+
+✔️ Multiple model support: ARIMA, ANN, Hybrid ARIMA–ANN, LSTM, Prophet, SVR.
+✔️ Custom workaround for `predict()`-only models.
+✔️ SQLite3 integration for storing results.
+✔️ Flask API for backend handling.
+✔️ React.js frontend for visualizations and user interaction.
+
+---
