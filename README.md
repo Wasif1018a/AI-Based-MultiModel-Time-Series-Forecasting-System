@@ -50,8 +50,8 @@ The project integrates:
 * **Main_Code.py**
 
   * Handles data preprocessing and transformations.
-  * Trains models using `statsmodels` (ARIMA, etc.), ANN, Hybrid ARIMA–ANN.
-  * Includes other architectures like **LSTM, Prophet, SVR**.
+  * Trains models using `statsmodels` (ARIMA, SARIMA etc.).
+  * Includes other architectures **ANN, Hybrid ARIMA–ANN, LSTM, Prophet, SVR**.
   * Generates predictive forecasts and stores results in **SQLite3 DB**.
 
 * **Flask.py**
